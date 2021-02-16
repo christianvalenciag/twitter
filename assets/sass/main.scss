@@ -1,0 +1,379 @@
+@import "lib/vars";
+@import "lib/mixins";
+@import "lib/reboot";
+@import "lib/fontawesome/font-awesome";
+@import "lib/fontface";
+@import "lib/keyframes";
+@import "partials/tweets";
+@import "partials/modal";
+
+// * {
+//   border: 1px solid pink;
+// }
+
+html, body{
+  height: 100%;
+  margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.twitter {
+    min-height: 100%;
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+
+    
+    &.night {
+        color: white;
+        background-color: rgb(37, 37, 56);
+    }
+}
+
+input[type="text"],
+input[type="password"],
+input[type="color"],
+input[type="date"],
+input[type*="datetime"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"], 
+textarea, 
+select,
+datalist {
+		display: block;
+		margin-bottom: .75em;
+		width: 100%;
+		padding: .5rem;
+		font-size: 1.2rem;
+		border: 1px solid #ddd;
+
+		&:hover {
+
+		}
+		&:focus {
+				
+				&:hover {
+
+				}
+		}
+		&[disabled] {
+		
+		}
+		&[readonly] {
+		
+		}
+}
+
+select {
+
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+		
+		& ~ label {
+
+		}
+}
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"] {
+		
+		&:hover {
+
+		}
+		&:focus {
+				
+				&:hover {
+
+				}
+		}
+		&[disabled] {
+		
+		}
+}
+
+// MENU
+
+.menu {
+    padding-right: 6rem;
+    margin-bottom: 2rem ;
+    padding: 0 7rem;
+    width: 24rem;
+    .logo {
+        height: 3.4rem;
+        width: 4rem;
+        margin: 1rem 1rem;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50px;
+        }
+    }
+    .into_menu {
+        padding-bottom: 1.5rem;
+        .menu_tw {
+          padding-bottom: 1rem;
+            li {
+                padding: 0.5rem 0;
+                list-style: none;
+                .menu_a {
+                    text-decoration: none;
+                    color: black;
+                    font-size: 1.2rem;
+                    .fa {
+                        margin-right: 1rem;
+                    }
+                    &:hover{
+                      color: rgb(70, 157, 214);
+                    }
+                    &.a_in{
+                      color: rgb(70, 157, 214);
+                    }
+                }
+                
+            }
+            &.night{
+              li {
+                .menu_a {
+                  color: white;
+                    .fa {
+                    }
+                    &:hover{
+                      color: rgb(70, 157, 214);
+                    }
+                    &.a_in{
+                      color: rgb(70, 157, 214);
+                    }
+                }
+              }
+              
+            }
+        }
+        .on_off_night {
+            padding: 0.3rem 1rem;
+            border-radius: 15px;
+            background-color: rgb(70, 157, 214);
+            color: white;
+            border: none;
+            width: 100%;
+            .fa {
+              color: white;
+              margin-left: .5rem;
+              &.fa-moon{
+                display: inline;
+              }
+              &.fa-sun{
+                display: none;
+              }
+            }
+
+            &:hover {
+                background-color: rgb(10, 109, 175);
+            }
+            &.night{
+              .fa {
+                &.fa-moon{
+                  display: none;
+                }
+                &.fa-sun{
+                  display: inline;
+                }
+              }
+            }
+        }
+    }
+    .tweet {
+        padding: 0.3rem 1rem;
+        border-radius: 15px;
+        background-color: rgb(70, 157, 214);
+        color: white;
+        border: none;
+        width: 100%;
+
+        &:hover {
+            background-color: rgb(10, 109, 175);
+        }
+    }
+}
+
+// HOME - COLLECTION
+
+.collection_tweets {
+    width: 40rem;
+    box-shadow: 1px 1px 10px rgb(179, 178, 178);
+    &.night{
+      box-shadow: 1px 1px 10px  rgb(26, 26, 39);
+    }
+    .home {
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: solid 0.75px rgb(94, 94, 94);
+        font-weight: bold;
+        .fa {
+            color: rgb(70, 157, 214);
+            &:hover {
+                color: rgb(10, 109, 175);
+            }
+        }
+    }
+    .new_tweet{}
+
+    .others_tweets {
+        .tweet_into_collection {
+            display: flex;
+            flex-direction: row;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            border-top: solid 0.75px rgb(94, 94, 94);
+            border-bottom: solid 0.75px rgb(94, 94, 94);
+            &.rt{
+                background-color: green;
+            }
+            .user_tweet {
+                height: 3rem;
+                width: 3rem;
+                margin: 0 1rem;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    border-radius: 50px;
+                }
+            }
+            .tweet_user{
+                
+                .name_user {
+                    .ident {
+                        margin-left: 0.5rem;
+                        color: rgb(143, 143, 143);
+                    }
+                    .hour_tweet {
+                        margin-left: 1rem;
+                        color: rgb(192, 192, 192);
+                    }
+                }
+                .tweet {
+                    width: 30rem;
+                    padding-right: 1rem;
+                    .all_tweet {
+                        width: 100%;
+                    }
+                    .interaction_tweet {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 0.7rem;
+                        margin-right: 2.6rem;
+                        .fa {
+                            color: rgb(172, 172, 172);
+                            .counter{
+                                margin-left: .6rem;
+                                font-family: 'Source Sans Pro';
+                                font-weight: normal;
+                            }
+                            &.fa-comment{
+                                &:hover{
+                                    color: rgb(70, 157, 214);
+                                }
+                            }
+                            &.fa-retweet{
+                                &:hover{
+                                    color:rgb(97, 160, 97);
+                                }
+                            }
+                            &.fa-heart{
+                                &:hover{
+                                    color:rgb(209, 59, 59);
+                                }
+                            }
+                            &.fa-edit{
+                                &:hover{
+                                    color: rgb(70, 157, 214);
+                                }
+                            }
+                            &.fa-trash-alt{
+                                &:hover{
+                                    color: rgb(70, 157, 214);
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+            
+        }
+    }
+}
+
+// EXPLORE
+
+.explore {
+    .num_tweets{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        
+        .num_tweets_tittle{
+            margin-top: 1rem ;
+            padding: .5rem 1rem .5rem 1rem;
+            font-weight: bold;
+            background-color: rgb(70, 157, 214);
+            color: white;
+            border-radius: 10px 10px 0 0;
+            width: 17rem;
+            display: flex;
+            justify-content: center;
+        }
+        .num_cont{
+            padding: 1rem 1rem 1rem 1rem;
+            background-color: rgb(169, 217, 248);
+            // border-radius:0 0 10px 10px;
+            color: black;
+            width: 17rem;
+            display: flex;
+            justify-content: center;
+        }
+        .trush_all_tweets{
+            margin:0rem 0 1.5rem 0;
+            padding: 0.4rem 1rem;
+            // border-radius: 15px;
+            border-radius:0 0 10px 10px;
+             background-color: rgb(70, 157, 214);
+             color: white;
+            border: none;
+            width: 17rem;
+
+            .fa{
+                margin-right: .2rem;
+            }
+
+          &:hover {
+            background-color: rgb(10, 109, 175);
+          }
+        }
+    }
+    
+}
+
+
+

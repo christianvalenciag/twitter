@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#fafafa" />
+
+    <title>Twitter</title>
+    <link rel='stylesheet' href='https://unpkg.com/emoji.css/dist/emoji.min.css'>
+    <meta name="description" content="" />
+    <link rel="apple-touch-icon" href="./assets/img/icon.png" />
+    <link rel="icon" href="./assets/img/favicon.png" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/main.css.map" />
+    <link rel="icon" href="./assets/imagenes" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="twitter">
+        <div class="menu">
+            <div class="logo">
+                <img src="assets/imagenes/tw.png" alt="">
+            </div>
+            <div class="into_menu">
+                <nav class="menu_tw">
+                    <ul>
+                        <!-- <li><a class="menu_a a_in" href="#"><span class="fa fa-home "></span>Inicio</a></li>
+                        <li><a class="menu_a" href="#"><span class="fa fa-hashtag"></span>Explorar</a></li>
+                        <li><a class="menu_a" href="#"><span class="fa fa-bell"></span>Notificaciones</a></li>
+                        <li><a class="menu_a" href="#"><span class="fa fa-envelope"></span>Mensajes</a></li>
+                        <li><a class="menu_a" href="#"><span class="fa fa-download"></span>Guardados</a></li>
+                        <li><a class="menu_a" href="#"><span class="fa fa-list"></span>Listas</a></li>
+                        <li><a class="menu_a" href="#"><span class="fa fa-user"></span>Perfil</a></li>
+                        <li><a class="menu_a" href="#"><span class="fa fa-plus"></span>Más opciones</a></li> -->
+                    </ul>
+                </nav>
+                <button class="on_off_night">Modo<span class="fa fa-moon"></span><span class="fa fa-sun"></span> </button>
+            </div>
+            <button class="tweet">Twittear</button>
+        </div>
+        <div class="collection_tweets">
+            <div class="home">Inicio <span class="fa fa-star"></span></div>
+            <div class="new_tweet">
+                <div class="user_tweet">
+                    <img src="assets/imagenes/elsa.png" alt="">
+                </div>
+                <form class="new_tweet_form" name="new">
+                    <div class="write_tweet">
+                        <textarea placeholder="¿Qué está pasando?" name="new_tweet" cols="30" rows="5"></textarea>
+                    </div>
+                    <div class="tweet_more">
+                        <div class="tweet_more_fa">
+                            <span class="fa fa-image"></span>
+                            <span class="fa fa-smile"></span>
+                            <span class="fa fa-bar-chart"></span>
+                            <span class="fa fa-calendar-alt"></span>
+                        </div>
+                        <button class="send_tweet" type="submit">Twittear</button>
+                    </div>
+                </form>
+            </div>
+            <div class="others_tweets">
+                <!-- <div class="tweet_into_collection">
+                    <div class="user_tweet">
+                        <img src="assets/imagenes/olaf.png" alt="">
+                    </div>
+                    <div class="tweet_user">
+                        <div class="name_user">OLAF <span class="ident">@olaf_muñeco_nieve</span><span class="hour_tweet">- 6h</span></div>
+                        <div class="tweet">
+                            <div class="all_tweet">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
+                                nostrum. Veritatis eius error, voluptatibus esse numquam atque autem dolores omnis
+                                accusantium. <span class="ec ec-fire"></span> <span class="ec ec-sparkles"></span> </div>
+                            <div class="interaction_tweet">
+                                <span class="fa fa-comment"><span class="counter">2</span></span>
+                                <span class="fa fa-retweet"><span class="counter">10</span></span>
+                                <span class="fa fa-heart"><span class="counter">200</span></span>
+                                <span class="fa fa-edit"></span>
+                                <span class="fa fa-trash-alt"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+        </div>
+        <div class="explore">
+            <div class="num_tweets">
+                <div class="num_tweets_tittle">Numero total de tweets</div>
+                <div class="num_cont"> 0 </div>
+                <button class="trush_all_tweets"><span class="fa fa-trash-alt"></span> Borrar todos</button>
+            </div>
+        </div>
+
+        <div class="modal_tweet">
+            <div class="overlay"></div>
+            <div class="modal_holder">
+                <div class="modal_header">
+                    <div class="close_modal">
+                        <span class="fa fa-close"></span>
+                    </div>
+                </div>
+                <div class="modal_body">
+                    <div class="new_tweet">
+                        <div class="user_tweet">
+                            <img src="assets/imagenes/elsa.png" alt="">
+                        </div>
+                        <form class="new_tweet_form" name="new_modal">
+                            <div class="write_tweet">
+                                <textarea placeholder="¿Qué está pasando?" name="new_tweet" cols="30" rows="5"></textarea>
+                            </div>
+                            <div class="tweet_more">
+                                <div class="tweet_more_fa">
+                                    <span class="fa fa-image"></span>
+                                    <span class="fa fa-smile"></span>
+                                    <span class="fa fa-bar-chart"></span>
+                                    <span class="fa fa-calendar-alt"></span>
+                                </div>
+                                <button class="send_tweet" type="submit">Twittear</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./app/main.js"></script>
+    <script src="./app/data.js"></script>
+</body>
+
+</html>
